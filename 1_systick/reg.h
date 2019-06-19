@@ -199,13 +199,13 @@
 #define SYST_BASE 0xE000E010
 
 #define SYST_CSR_OFFSET 0x00
-#define SYST_CLKSOURCE_BIT 2
-#define SYST_TICKINT_BIT 1
-#define SYST_ENABLE_BIT 0
+#define SYST_CLKSOURCE_BIT 2 //0: Use externa clock, 1: use internal colck
+#define SYST_TICKINT_BIT 1 //1: Count to 0 cause Systick exception
+#define SYST_ENABLE_BIT 0 //1: Enable the Systick
 
 
-#define SYST_RVR_OFFSET 0x04
-#define SYST_RELOAD_23_BIT 23
+#define SYST_RVR_OFFSET 0x04 //SysTick Reload Value Register （多久reload一次）
+#define SYST_RELOAD_23_BIT 23 //Bit23-0 設定多久Reload一次用(記得-1)
 #define SYST_RELOAD_0_BIT 0
 
 #endif
